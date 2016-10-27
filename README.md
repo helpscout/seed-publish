@@ -1,4 +1,4 @@
-# seed-publish [![npm version](https://badge.fury.io/js/seed-publish.svg)](https://badge.fury.io/js/seed-publish)
+# seed-publish [![Build Status](https://travis-ci.org/helpscout/seed-publish.svg?branch=master)](https://travis-ci.org/helpscout/seed-publish) [![npm version](https://badge.fury.io/js/seed-publish.svg)](https://badge.fury.io/js/seed-publish)
 
 Mixins that manage rendered CSS from modular importing
 
