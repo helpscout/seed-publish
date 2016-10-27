@@ -7,6 +7,10 @@ Mixins that manage rendered CSS from modular importing
 npm install seed-publish --save
 ```
 
+## Documentation
+
+Check out our styleguide for **[documentation of this pack](http://style.helpscout.com/seed/packs/seed-publish/)**.
+
 
 ## Basic Usage
 
@@ -34,7 +38,3 @@ Once that is setup, simply `@import` *seed-publish* as needed in your `.scss` fi
 // Packs
 @import "pack/seed-publish/_index";
 ```
-
-## Documentation
-
-**Coming soon!!!**
