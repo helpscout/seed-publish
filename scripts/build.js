@@ -29,23 +29,3 @@ sass.render({
     })
   }
 });
-
-// Minified .css compile
-sass.render({
-  file: './scss/pack/'+file+'/__index.scss',
-  includePaths: includePaths,
-  outputStyle: 'compressed'
-}, function(error, result) {
-  if (error) {
-    console.error(error);
-    return process.exit(1);
-  }
-  else {
-    mkdirp('./dist');
-    fs.writeFile('./dist/'+file+'.min.css', result.css, function(err){
-      if(!err){
-        return console.log(file+'.min.css created.');
-      }
-    })
-  }
-});

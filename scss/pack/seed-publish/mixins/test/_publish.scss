@@ -1,0 +1,33 @@
+// Test :: publish
+
+@import "true";
+@import "../export";
+@import "../publish";
+
+
+@include test-module("Mixin: publish") {
+  @include test("should prevent @content after key is exported") {
+    @include assert("outputs @content") {
+      @include output {
+        @include export(c) {
+          background: pink;
+        }
+        @include publish(c);
+        @include export(c) {
+          margin: 0;
+        }
+      }
+      @include expect {
+        background: pink;
+      }
+    }
+  }
+
+  @include test("should contain defined key(s) in exports list") {
+    $test: map-get($__seed-publish-list, c);
+    $expect: true;
+    @include assert-equal($test, $expect,
+      "Returns the correct value of the key");
+  }
+}
+

@@ -35,10 +35,6 @@ Once that is setup, simply `@import` *seed-publish* as needed in your `.scss` fi
 @import "pack/seed-publish/_index";
 ```
 
-## Options
+## Documentation
 
-The following variables can be found in `_config.scss`
-
-```scss
-seed-publish config options
-```
+**Coming soon!!!**
