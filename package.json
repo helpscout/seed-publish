@@ -1,6 +1,6 @@
 {
   "name": "seed-publish",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Mixins that manage rendered CSS from modular importing",
   "main": "index.js",
   "scripts": {
