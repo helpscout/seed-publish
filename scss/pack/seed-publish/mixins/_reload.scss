@@ -1,11 +1,11 @@
-// Mixins :: Load
+// Mixins :: Reload
 
 // Dependencies
 @import "../config";
 
-@mixin load($keys...) {
+@mixin reload($keys...) {
   @if $keys == false {
-    @error "load: An argument must be defined.";
+    @error "reload: An argument must be defined.";
   }
   @each $key in $keys {
     @if (type-of($key) == "string") {
@@ -14,7 +14,7 @@
     @else if (type-of($key) == "list") {
       @each $k in $key {
         // Recursively exclude
-        @include load($k);
+        @include reload($k);
       }
     }
   }

@@ -1,12 +1,12 @@
-// Test :: unload
+// Test :: Reload
 
 @import "true";
 @import "../export";
-@import "../load";
+@import "../reload";
 @import "../publish";
 @import "../unload";
 
-@include test-module("Mixin: load") {
+@include test-module("Mixin: reload") {
 
   @include test("should allow unloaded to be published") {
     @include assert("outputs") {
@@ -22,7 +22,7 @@
         @include publish($key);
 
         // Enable @import again
-        @include load($key);
+        @include reload($key);
         // Mock @import
         @include export($key) {
           margin: 0;
