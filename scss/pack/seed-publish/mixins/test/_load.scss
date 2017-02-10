@@ -1,0 +1,38 @@
+// Test :: unload
+
+@import "true";
+@import "../export";
+@import "../load";
+@import "../publish";
+@import "../unload";
+
+@include test-module("Mixin: load") {
+
+  @include test("should allow unloaded to be published") {
+    @include assert("outputs") {
+      @include output {
+        background: pink;
+
+        $key: test-001;
+        @include unload($key);
+        // Mock @import
+        @include export($key) {
+          margin: 0;
+        }
+        @include publish($key);
+
+        // Enable @import again
+        @include load($key);
+        // Mock @import
+        @include export($key) {
+          margin: 0;
+        }
+        @include publish($key);
+      }
+      @include expect {
+        background: pink;
+        margin: 0;
+      }
+    }
+  }
+}
