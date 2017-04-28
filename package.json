@@ -3,12 +3,16 @@
   "version": "0.1.1",
   "description": "Mixins that manage rendered CSS from modular importing",
   "main": "index.js",
+  "files": [
+    "scss",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "banner": "node ./scripts/banner.js",
-    "build": "npm run build:main && npm run banner",
-    "build:main": "node ./scripts/build.js",
-    "test": "sh ./scripts/test.sh && npm run build",
-    "prepublish": "npm run test"
+    "prepublish": "npm run test",
+    "test:mocha": "mocha",
+    "test": "npm run test:mocha"
   },
   "homepage": "https://github.com/helpscout/seed-publish/",
   "repository": {
@@ -46,7 +50,6 @@
   "devDependencies": {
     "mkdirp": "^0.5.1",
     "node-sass": "^3.10.0",
-    "sass-true": "^2.1.4",
-    "seed-cli": "^0.2.8"
+    "seed-bistro": "0.1.1"
   }
 }
