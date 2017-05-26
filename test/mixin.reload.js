@@ -32,12 +32,12 @@ describe('seed-publish: reload', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
-    expect($o.getProp('background')).to.equal('pink');
-    expect($o.getProp('color')).to.not.equal('red');
-    expect($o.getProp('color')).to.equal('pink');
-    expect($o.getProp('padding')).to.equal('10px');
-    expect($o.getProp('margin')).to.be.false;
+    expect($o.prop('background')).to.equal('pink');
+    expect($o.prop('color')).to.not.equal('red');
+    expect($o.prop('color')).to.equal('pink');
+    expect($o.prop('padding')).to.equal('10px');
+    expect($o.prop('margin')).to.be.false;
   });
 });

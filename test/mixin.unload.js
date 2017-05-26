@@ -21,9 +21,9 @@ describe('seed-publish: unload', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
-    expect($o.getProp('background')).to.equal('pink');
-    expect($o.getProp('color')).to.be.false;
+    expect($o.prop('background')).to.equal('pink');
+    expect($o.prop('color')).to.be.false;
   });
 });

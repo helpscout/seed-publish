@@ -20,10 +20,10 @@ describe('seed-publish: publish', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
-    expect($o.getProp('color')).to.equal('pink');
-    expect($o.getProp('margin')).to.be.false;
+    expect($o.prop('color')).to.equal('pink');
+    expect($o.prop('margin')).to.be.false;
   });
 
   it('should prevent selectors from compiling after publishing', function() {
@@ -45,11 +45,11 @@ describe('seed-publish: publish', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
     expect($o.exists()).to.be.true;
     expect($o.selectors.length).to.equal(1);
-    expect($o.getProp('color')).to.equal('pink');
-    expect($o.getProp('background')).to.be.false;
+    expect($o.prop('color')).to.equal('pink');
+    expect($o.prop('background')).to.be.false;
   });
 });

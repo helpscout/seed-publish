@@ -18,10 +18,10 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
     expect($o.exists()).to.equal.true;
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
   });
 
   it('should compile @content when used inside of a selector', function() {
@@ -36,10 +36,10 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
     expect($o.exists()).to.equal.true;
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
   });
 
   it('should have local variable scoping', function() {
@@ -56,9 +56,9 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
+    var $o = output.rule('.pinkhot');
 
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
   });
 
   it('should allow additional @content to be compiled', function() {
@@ -79,13 +79,13 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
-    var $hp = output.$('.hothothothotpink');
+    var $o = output.rule('.pinkhot');
+    var $hp = output.rule('.hothothothotpink');
 
     expect($o.exists()).to.equal.true;
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
     expect($hp.exists()).to.equal.true;
-    expect($hp.getProp('background')).to.equal('pink');
+    expect($hp.prop('background')).to.equal('pink');
   });
 
   it('should compile @content with different keys', function() {
@@ -105,13 +105,13 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
-    var $hp = output.$('.hothothothotpink');
+    var $o = output.rule('.pinkhot');
+    var $hp = output.rule('.hothothothotpink');
 
     expect($o.exists()).to.equal.true;
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
     expect($hp.exists()).to.equal.true;
-    expect($hp.getProp('background')).to.equal('pink');
+    expect($hp.prop('background')).to.equal('pink');
   });
 
   it('should compile @content with different keys', function() {
@@ -131,12 +131,12 @@ describe('seed-publish: export', function() {
       }
     `;
     var output = barista({ content: style });
-    var $o = output.$('.pinkhot');
-    var $hp = output.$('.hothothothotpink');
+    var $o = output.rule('.pinkhot');
+    var $hp = output.rule('.hothothothotpink');
 
     expect($o.exists()).to.equal.true;
-    expect($o.getProp('color')).to.equal('pink');
+    expect($o.prop('color')).to.equal('pink');
     expect($hp.exists()).to.equal.true;
-    expect($hp.getProp('background')).to.equal('pink');
+    expect($hp.prop('background')).to.equal('pink');
   });
 });
