@@ -3,12 +3,6 @@
   "version": "0.1.2",
   "description": "Mixins that manage rendered CSS from modular importing",
   "main": "index.js",
-  "files": [
-    "scss",
-    "index.js",
-    "README.md",
-    "LICENSE"
-  ],
   "scripts": {
     "prepublish": "npm run test",
     "test:mocha": "mocha",
